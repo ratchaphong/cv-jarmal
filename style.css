@@ -1,0 +1,149 @@
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-english: "Poppins", sans-serif;
+  --font-thai: "Kanit", sans-serif;
+  --primary-color: white;
+  --primary-color-2: #f5f5f5; /* พื้นหลังรอง */
+  --primary-color-3: #b0b0b0; /* เส้นแบ่งหรือคำอธิบายอ่อนๆ */
+  --background-color: white;
+  --secondary-color: #000000; /* สีตัวอักษรหลัก */
+  --secondary-color-2: #2e2e2e; /* สีตัวอักษรรอง */
+  --button-background: #2e2e2e;
+  --button-text-hover: #555;
+  --button-border: #2e2e2e 0.1rem solid;
+  --button-border-2: #ffffff 0.1rem solid;
+  --container-border: #b0b0b0;
+}
+
+body {
+  font-family: var(--font-thai);
+  background-color: var(--bg-light);
+  color: var(--secondary-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary-color-2);
+  border-bottom: 1px solid var(--secondary-color-2);
+}
+
+#cv {
+  background: var(--primary-color);
+  width: 210mm;
+  min-height: 297mm;
+  margin: auto;
+  padding: 3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+  list-style: disc;
+}
+
+.section__text {
+  margin-bottom: 1.5rem;
+}
+
+.company {
+  padding-left: 0;
+}
+
+.company .info {
+  margin-bottom: 2rem;
+}
+
+.company__name {
+  margin-bottom: 0.5rem;
+}
+
+.project__name {
+  margin-top: 1rem;
+}
+
+#download {
+  font-family: var(--font-english);
+  background-color: var(--button-background); /* ใช้เทาเข้ม */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+#download:hover {
+  background-color: var(--button-text-hover); /* สีเทาอ่อนขึ้นเมื่อ hover */
+  cursor: pointer;
+}
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+
+  #download {
+    display: none;
+  }
+
+  #cv {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+  }
+}
