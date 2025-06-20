@@ -113,9 +113,14 @@ ul li {
   margin-top: 1rem;
 }
 
-#download {
+.project__tech-inline b {
+  font-weight: 600;
+  color: var(--secondary-color-2);
+}
+
+/* #download {
   font-family: var(--font-english);
-  background-color: var(--button-background); /* ใช้เทาเข้ม */
+  background-color: var(--button-background);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -127,7 +132,49 @@ ul li {
 }
 
 #download:hover {
-  background-color: var(--button-text-hover); /* สีเทาอ่อนขึ้นเมื่อ hover */
+  background-color: var(--button-text-hover);
+  cursor: pointer;
+} */
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-color-1 {
+  font-family: var(--font-english);
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-color-1:hover {
+  background-color: var(--button-text-hover);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.btn-color-2 {
+  font-family: var(--font-english);
+  background-color: white;
+  color: var(--button-background);
+  border: var(--button-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-color-2:hover {
+  background-color: var(--button-text-hover);
+  color: white;
   cursor: pointer;
 }
 
@@ -137,7 +184,7 @@ ul li {
     padding: 0;
   }
 
-  #download {
+  #button-group {
     display: none;
   }
 
